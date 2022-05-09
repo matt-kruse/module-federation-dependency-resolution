@@ -1,0 +1,11 @@
+{
+  "name": "HostApp",
+  "remotes": {
+    "ComponentLibrary": "ComponentLibrary@//localhost:3002/remoteEntry.js"
+  },
+  "shared": {
+    "react": {
+      "singleton": true
+    }
+  }
+}

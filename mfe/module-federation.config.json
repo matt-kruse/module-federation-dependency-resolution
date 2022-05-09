@@ -1,0 +1,16 @@
+{
+  "name": "ComponentLibrary",
+  "library": {
+    "type": "var",
+    "name": "ComponentLibrary"
+  },
+  "filename": "remoteEntry.js",
+  "exposes": {
+    "./Component": "./src/Component"
+  },
+  "shared": {
+    "react": {
+      "singleton": true
+    }
+  }
+}

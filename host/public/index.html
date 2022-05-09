@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script>
+      let logs = [];
+      console._warn = console.warn;
+      console.warn = function(w) {
+        if (w) {
+          logs.push('<div><code>'+w+'</code></div>');
+          console._warn(w);
+        }
+        let el = document.getElementById('warnings');
+        if (el) {
+          el.innerHTML += logs.join('');
+          logs = [];
+        }
+        else {
+          setTimeout(console.warn,500);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
